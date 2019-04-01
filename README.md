@@ -1,6 +1,19 @@
 # AxinomVideoFeed
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+This Angular application show a list of movies in horizontally scrollable containers, from which a user can navigate to see the movie or click on the genre name and see all matching movies under there.
+
+This app uses videogular2 and dash.js to play videos from Microsoft PlayReady - This is only supported by Edge and IE browsers.
+For lazy loading images ngx-lazy-load-images was used. 
+
+
+## Installation
+
+This app will install all required dependencies automatically. Just start the commands below in the root folder where you stored the package.
+
+```SH
+$ npm install
+```
 
 ## Development server
 
