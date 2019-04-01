@@ -1,0 +1,26 @@
+
+<div *ngIf="genre">
+
+    <div class="link-container container-fluid">
+        <a [routerLink]="[ '/movies' ]" class="category-link">
+            <h1 style="color: white;"><i class="fas fa-chevron-left"></i> {{genre | titlecase}}</h1>
+        </a>  
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div *ngFor='let video of videos | getVideoGenre' class="movie-container col-lg-2 col-md-3 col-sm-4 col-6" >
+                <a [routerLink]="[ '/movie', video.asset ]" class="item-link">
+                    <div class="movie-tile fast-transition ">
+                        <img src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                                <p>{{video.title}}</p>
+                        </div> 
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url('../node_modules/videogular2/fonts/videogular.css');
+
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background: #7474BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.ng-container {
+    padding: 0 15px;
+}
+
+.link-container {
+background: #7474BF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-bottom: 3px solid #7474F1;
+margin-bottom: 30px;
+    h1 {
+        color: white;
+    }
+}
+
+.fast-transition {
+    position: relative; /* For positioning the pseudo-element */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .fast-transition::before {
+    /* Position the pseudo-element. */
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Create the box shadow at expanded size. */
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  
+    /* Hidden by default. */
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  
+  .fast-transition:hover::before {
+    /* Show the pseudo-element on hover. */
+    opacity: 1;
+  }

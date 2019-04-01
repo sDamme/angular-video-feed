@@ -1,0 +1,52 @@
+  
+    .video-slider {
+      float: left;
+      width: 100%;
+      overflow: auto;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      .video-item {
+        display: inline-block;
+        margin: 0 10px;
+        width: 248px;
+        height: 379px;
+    
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  
+    .video-slider-controls {
+      position: relative;
+      height: 383px;
+      pointer-events: none;
+
+      .video-slider-arrows {
+        position: absolute;
+        top: calc(50% - 70px);
+        background: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        pointer-events: all;
+        font-size: 2em;
+        cursor: pointer;
+
+        &.left {
+          left: 0;
+        }
+        &.right {
+          right: 0;
+        }
+        i {
+          color: white;
+        }
+      }
+    
+  }
+  
+    
+  
+ 

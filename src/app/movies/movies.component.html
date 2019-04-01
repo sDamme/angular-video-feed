@@ -1,0 +1,141 @@
+<div *ngIf="videos">
+    <div class="link-container container-fluid">
+        <h1>Movies</h1>
+    </div>
+        
+        <div class="container-fluid">
+            <a [routerLink]="[ '/movies/drama' ]" class="category-link">DRAMA<i class="fas fa-chevron-right"></i></a>
+            <videoSlider>
+                <ng-container *ngFor='let video of videos | showGenre: "Drama"'>
+                  <ng-container *videoItem>
+                    <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                    </div>
+                  </ng-container>
+                </ng-container>
+            </videoSlider>
+        
+         
+        
+          <a [routerLink]="[ '/movies/Sci-Fi' ]" class="category-link">SCI-FI<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Sci-Fi"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>   
+
+          <a [routerLink]="[ '/movies/horror' ]" class="category-link">HORROR<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Horror"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>     
+
+          <a [routerLink]="[ '/movies/romances' ]" class="category-link">ROMANCES<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Romances"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>
+
+          <a [routerLink]="[ '/movies/adventure' ]" class="category-link">ADVENTURE<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Adventure"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>
+      
+
+
+          <a [routerLink]="[ '/movies/thriller' ]" class="category-link">THRILLER<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Thriller"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider> 
+
+          <a [routerLink]="[ '/movies/animation' ]" class="category-link">ANIMATION<i class="fas fa-chevron-right"></i></a>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showGenre: "Animation"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>
+
+          <div class="category-link">Live</div>
+          <videoSlider>
+              <ng-container *ngFor='let video of videos | showLive: "Live"'>
+                <ng-container *videoItem>
+                  <div class="item">
+                      <a [routerLink]="[ '/movie', video.asset ]" class="item-link" lazy-load-images>
+                        <img attr.data-src="http://media.cms.showcase.axtest.net/api/storage/publish/movies/{{video.asset}}/cover/small_video_list.png" />
+                        <div class="item-name">
+                            <p>{{video.title}}</p>
+                        </div>
+                      </a>
+                  </div>
+                </ng-container>
+              </ng-container>
+          </videoSlider>
+
+      </div>
+
+</div>
