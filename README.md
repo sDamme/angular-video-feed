@@ -1,4 +1,4 @@
-# AxinomVideoFeed
+# AngularVideoFeed
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 This Angular application show a list of movies in horizontally scrollable containers, from which a user can navigate to see the movie or click on the genre name and see all matching movies under there.
